@@ -1,0 +1,17 @@
+Comandos para usar mongo db con docker
+
+-Para crear una instancia de la imagen de mongo db e incluso compartir los archivos mediante los "volumes" usamos el comando:
+
+	docker run -d -p 27017:27017 -v /home/fazt/.../.../:/data/db --name mongo-name mongo
+
+donde:
+	-d: es el modo detach (en segundo plano)
+	-v: es la conexión entre la ruta local y la ruta del contenedor
+	-p: se usa para ocnfigurar el puerto local con respecto al del contenedor
+
+-Para utilizar el contenedor de manera interactiva usamos el comando:
+
+	docker exec -it mydatabase bash
+
+donde: 
+	se ejecuta el contenedor en una nueva linea de comandos 
